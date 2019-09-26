@@ -1,3 +1,4 @@
+<?php include("modulos/comun.php"); ?>
 <!DOCTYPE html>
 <html>
 <head>
