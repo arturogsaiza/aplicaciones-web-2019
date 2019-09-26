@@ -18,7 +18,7 @@
     <section class="content">    
     <?php include("modulos/estadisticas.php"); ?>
 
-    <h1>Hello World</h1>
+    <h1>Hello World.............</h1>
      
   
     </section>    <!-- /.content -->
