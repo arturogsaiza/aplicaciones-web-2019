@@ -12,7 +12,7 @@ if($hay_sesion==true){
 
 }else{
 
-    $error="El correo o la contrasena son incorrectos;";
+    $error="<b style='color:#f00;'>El correo o la contrasena son incorrectos</b><br>";
 
 }
 }
@@ -70,6 +70,14 @@ if($hay_sesion==true){
         <input type="password" class="form-control" placeholder="Password" name="contrasena">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
+
+        <?php 
+        if(isset($error)){
+        	   echo $error;
+        }
+        ?>
+
+
       <div class="row">
         <div class="col-xs-8">
           <div class="checkbox icheck">
