@@ -37,6 +37,7 @@
             <li class="active"><a href="index.php"><i class="fa fa-circle-o"></i> Dashboard</a></li>
             <li><a href="perfil.php"><i class="fa fa-circle-o"></i>Perfil</a></li>
             <li><a href="store.php"><i class="fa fa-circle-o"></i>Tienda Online</a></li>
+            <li><a href="carrito.php"><i class="fa fa-circle-o"></i>Carrito de compras</a></li>
           </ul>
         </li>
         <li class="treeview">

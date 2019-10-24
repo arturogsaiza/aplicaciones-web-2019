@@ -2,7 +2,7 @@
 <?php
  
 if(isset($_POST['nombre'])){
-    $r=$_POST; 
+    $r=$_POST;  
 
     $_SESSION["carrito"][]=[
         "nombre"=> $r["nombre"],
@@ -11,16 +11,18 @@ if(isset($_POST['nombre'])){
         "imagen"=> $r['imagen']
     ];
 
-    /*  echo "<pre>";
-        print_r($_SESSION["carrito"]);
-        echo "</pre>";
-    */
-
-    foreach ($_SESSION["carrito"] as   $producto) {
-    echo $producto["nombre"]."<br>";
-    }
-
+    
 } 
+
+if(isset($_GET['eliminar'])){
+    $indice=$_GET['eliminar'];
+  unset($_SESSION["carrito"][$indice]);
+
+header("location:carrito.php?eliminado=true&indice=$indice");
+
+}
+
+
 
 ?>
 <!DOCTYPE html>
