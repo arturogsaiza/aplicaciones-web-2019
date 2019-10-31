@@ -15,10 +15,14 @@ try {
   }
   // $query de insertar 
   // $parametros: es un arreglo donde se colocaran todos los registros que se quieren insertar
-function insertar($query, $parametros){
-  $stmt =  $GLOBALS['pdo']->prepare($query);
-  $stmt->execute($parametros);  
-  return $stmt->rowCount(); 
+function insertar($query, $valores){
+  $consulta =  $GLOBALS['pdo']->prepare($query);  
+    try {
+       $consulta->execute($valores);
+       echo $GLOBALS['pdo']->lastInsertId();
+    } catch (\Throwable $th) {
+       return $consulta->errorInfo();
+    }
 }
  
 
