@@ -22,3 +22,23 @@ function logout(){
 }
 
 
+function registrar($usuario){
+     include("app/modelo/PDO.php"); 
+
+     $query='INSERT INTO usuarios VALUES(:id, :nombre, :apellidos, :edad, :semestre, :correo, :contrasena)';
+
+     $valores=array(
+        ':id' => null,
+        ':nombre' => $usuario['nombre'],
+        ':apellidos' => $usuario['apellidos'],
+        ':edad' => $usuario['edad'],
+        ':semestre' =>$usuario['semestre'],
+        ':correo' => $usuario['correo'],
+        ':contrasena' => $usuario['contrasena']
+        );
+
+       return insertar($query,$valores);
+
+}
+ 
+
