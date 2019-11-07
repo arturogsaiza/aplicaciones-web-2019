@@ -25,5 +25,18 @@ function insertar($query, $valores){
     }
 }
  
+function seleccionar($query, $parametros){
+  $stmt = $GLOBALS['pdo']->prepare($query);
+  $stmt->execute($parametros);
+  if( $stmt ->rowCount() ){
+      while ($row = $stmt->fetch()) {
+         $resultado[]=$row;         
+      }
+      return $resultado;
+  }else{
+      return array();
+  }
+  }
+  
 
 
