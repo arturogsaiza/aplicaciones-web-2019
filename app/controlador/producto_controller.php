@@ -2,7 +2,7 @@
 
 
 function registrar($producto){
-    include("app/modelo/dbpdo.php");
+    include("app/modelo/PDO.php");
 
     $query='INSERT INTO productos VALUES(:id, :nombre, :precio, :descripcion, :imagen)';
 
@@ -20,12 +20,9 @@ function registrar($producto){
 } 
 
 function listadeproductos(){
-    include("app/modelo/dbpdo.php");
-    $query='SELECT * FROM productos'  ;
-
-    $valores=array(
-        
-        );
+    include("app/modelo/PDO.php");
+    $query='select * from usuarios' ;
+    $valores=array( );
     return seleccionar($query, $valores);
 }
 

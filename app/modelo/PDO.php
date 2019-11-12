@@ -2,6 +2,7 @@
 
 // Ejemplo de conexión a diferentes tipos de bases de datos.
 # Conectamos a la base de datos
+ 
 $host='localhost';
 $dbname='clasedb';
 $username='root';

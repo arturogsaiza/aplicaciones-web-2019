@@ -12,4 +12,10 @@ if(isset($_GET['logout']) and  $_GET['logout']=="true" ){
     header('location:login.php');
 }
 
+if(!isset($_SESSION['carrito'])){
+    $_SESSION['carrito']= array();
+}
+
+
+
 ?>
